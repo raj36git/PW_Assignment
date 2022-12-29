@@ -1,0 +1,23 @@
+package Java_Arrays;
+
+//Q4. Calculate the minimum element in the array {2, -3, 5, 8, 1, 0, -4}
+// using standard library method
+//for calculating the minimum element.
+
+public class Q4 {
+    public static void main(String[] args) {
+        int[] arr = {2, -3, 5, 8, 1, 0, -4};
+        int ans = min(arr);
+        System.out.println(ans);
+    }
+
+     static int min(int[] arr) {
+        int minValue = Integer.MAX_VALUE;
+         for (int j : arr) {
+             if (j < minValue) {
+                 minValue = j;
+             }
+         }
+         return minValue;
+    }
+}

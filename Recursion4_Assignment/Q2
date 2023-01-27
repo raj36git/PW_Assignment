@@ -1,0 +1,21 @@
+package PwAssignment.Recursion4;
+//Q2 - Given two number x and y find product using recursion.
+public class Q2 {
+    public static void main(String[] args) {
+        int x = 2;
+        int y = 5;
+        System.out.println(multiple(x,y));
+    }
+    static int multiple(int x, int y){
+        //base case
+        if (x==0 || y==0){
+            return 0;
+        }
+        if (x<y){
+            return multiple(y,x);
+
+        } else {
+            return (x + multiple(x, y - 1));
+        }
+    }
+}
